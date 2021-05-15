@@ -1,0 +1,16 @@
+to test IP Camera 
+----------------------
+1. test the camera in vlc - for the case of TP-Link C200 below is the URL we will use = rtsp://{username}:{password}@{your-ip}:554/stream1
+2. run ffmpeg - convert rtsp to hls
+ffmpeg -i {URL} -fflags flush_packets -max_delay 2 -flags -global_header -hls_time 2 -hls_list_size 3 -vcodec copy -y ./index.m3u8
+3. create server to serve hls
+4. create client to show hls 
+
+
+to test webcam
+--------------------------------
+1. test the camera in browser client 
+2. send chunk of data to server
+3. run ffmpeg - convert chunk of data to hls
+4. create server to serve hls
+5. create client to show hls
