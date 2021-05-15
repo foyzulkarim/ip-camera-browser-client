@@ -1,4 +1,4 @@
-# video-streaming
+# How to stream your IP Camera into browser
 
 ## Stream IP Camera to VLC player
 - For the case of `TP-Link C200` model the URL I used = rtsp://{username}:{password}@{ip}:554/stream1
@@ -11,6 +11,8 @@
 Execute FFMPEG command
 
 `.\server\libs\ffmpeg.exe -i rtsp://{username}:{password}@{ip}:554/stream1 -fflags flush_packets -max_delay 5 -flags -global_header -hls_time 5 -hls_list_size 3 -vcodec copy -y .\videos\ipcam\index.m3u8`
+
+After successful execution, we should see the converted video files (`index.m3u8 *.ts`)
 
 ![image](https://user-images.githubusercontent.com/497812/118370441-4c262b80-b5da-11eb-97bb-4d5909f00b83.png)
 
@@ -25,6 +27,7 @@ Execute FFMPEG command
 - Open new terminal tab
 - Go inside server folder
 - Run `.\node_modules\.bin\nodemon .\cleaner.js`
+- This will delete the streamed/served `.ts` files from local directory to save the space
 
 ## Serve the auto generated hls (m3u8) file
 - Open new terminal tab
@@ -42,9 +45,11 @@ Execute FFMPEG command
 - Go inside `client\hls-client` folder
 - Run `npm install`
 - Run `npm start`
+
 ![image](https://user-images.githubusercontent.com/497812/118370619-087ff180-b5db-11eb-94da-19ce190a87f6.png)
 
 
 # Notes
-It is possible to automate all of the commands under simplified `npm start` command. However, for better understanding and clarity I break down the steps and showed how easy it is to actually stream your IP Camera to your browser. 
+It is possible to automate all of the commands under simplified `npm start` command in server project. However, for better understanding of how things work and better clarity, I break down the steps and showed how easy it is to actually stream your IP Camera to your browser. 
+
 If you have real IP from your ISP, you can point your Domain to your IP and see the camera feed from anywhere in the world through the browser. 
