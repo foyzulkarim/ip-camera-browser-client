@@ -7,7 +7,7 @@
 # Steps
 
 ## Stream IP Camera to VLC player
-- For the case of `TP-Link C200` model the URL I used = rtsp://{username}:{password}@{ip}:554/stream1
+- For the case of `TP-Link C200` model the URL I used = `rtsp://{username}:{password}@{ip}:554/stream1`
 - Input the URL in Network Stream
 
 ![image](https://user-images.githubusercontent.com/497812/118369633-ac1ad300-b5d6-11eb-85a2-6367b4b929ca.png)
@@ -41,7 +41,7 @@ After successful execution, we should see the converted video files (`index.m3u8
 - Run  `.\node_modules\.bin\nodemon .\hls-server.js`
 
 ## Test hls file in browser
-- Visit `https://cookpete.com/react-player/`
+- Visit [`cookpete.com/react-player`](https://cookpete.com/react-player).
 - Input the m3u8 url [http://localhost:4000/index.m3u8] and press `Load` 
 ![image](https://user-images.githubusercontent.com/497812/118370576-d2427200-b5da-11eb-83b1-dd49a0c5de43.png)
 
