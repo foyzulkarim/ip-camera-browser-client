@@ -1,5 +1,11 @@
 # How to stream your IP Camera into browser
 
+## YouTube explanation and demo
+
+[![YouTube explanation](https://img.youtube.com/vi/Acmng0FHHqI/0.jpg)](https://www.youtube.com/watch?v=Acmng0FHHqI)
+
+# Steps
+
 ## Stream IP Camera to VLC player
 - For the case of `TP-Link C200` model the URL I used = rtsp://{username}:{password}@{ip}:554/stream1
 - Input the URL in Network Stream
