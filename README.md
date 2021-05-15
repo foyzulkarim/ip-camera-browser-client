@@ -59,3 +59,6 @@ After successful execution, we should see the converted video files (`index.m3u8
 It is possible to automate all of the commands under simplified `npm start` command in server project. However, for better understanding of how things work and better clarity, I break down the steps and showed how easy it is to actually stream your IP Camera to your browser. 
 
 If you have real IP from your ISP, you can point your Domain to your IP and see the camera feed from anywhere in the world through the browser. 
+
+### Next
+ - Webcam streaming from browser camera to remote user
